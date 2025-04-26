@@ -13,9 +13,7 @@ from xgboost import XGBClassifier
 
 
 def plot_roc_auc_curve(model, X_test, y_test):
-    y_probs = model.predict_proba(X_test)[:,1]
 
-        
     #extract probabilities of class 1 only - focus is on positive classes
     y_probs = model.predict_proba(X_test)[:,1]    
 
@@ -81,7 +79,7 @@ def train_and_evaluate_model(X_train, X_test, y_train, y_test):
     mlflow.end_run()
     
     #ROC-AUC curve
-    plot_roc_auc_curve(xgb_model)    
-    plot_roc_auc_curve(rf_model)    
+    plot_roc_auc_curve(xgb_model, X_test,  y_test)    
+    plot_roc_auc_curve(rf_model, X_test, y_test)    
     return xgb_predictions, rf_predictions, xgb_accuracy, xgb_recall, rf_accuracy, rf_recall
 
