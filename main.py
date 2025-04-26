@@ -4,7 +4,7 @@ import xgboost
 from xgboost import XGBClassifier
 
 #Step1: load and prepare data
-data = load_and_prepare_data(file_path=r"d:/Data Science/Machine Learning & Deep Learning ANN (Regression & Classification)/Classification Practicals/Subscription_to_TermDeposit/bank-full.csv",
+data = load_and_prepare_data(file_path=r"D:\Data Science\Machine Learning & Deep Learning ANN (Regression & Classification)\Classification Practicals\Subscription_to_TermDeposit\VSCode\data\bank-full.csv",
                            target_column='y')
 print("Data has been loaded")
 
