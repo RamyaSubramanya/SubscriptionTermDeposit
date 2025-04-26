@@ -41,7 +41,7 @@ jobs:
 
       - name: Run ML model training and log metrics
         run: |
-          python modelling.py  # <-- your script that logs hyperparameters and metrics
+          python src/modelling.py  # <-- your script that logs hyperparameters and metrics
 
       - name: Upload MLflow metrics as artifacts
         uses: actions/upload-artifact@v4
